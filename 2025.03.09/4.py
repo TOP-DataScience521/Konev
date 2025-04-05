@@ -1,25 +1,20 @@
-n = input('Для выполнения математических операций введите положительное трехзначное число ')
+chislo = input('Для выполнения математических операций введите положительное трехзначное число: ')
 
-n1 = int(n) // 100
+cifra_1_chisla = int(chislo) // 100
+cifra_2_chisla = int(int(chislo) / 10 - cifra_1_chisla * 10)
+cifra_3_chisla = (int(chislo) - cifra_1_chisla * 100 - cifra_2_chisla * 10)
 
-n2 = int(n)/10 - n1*10
-n22 = int(n2)
+summa_cifr_chisla = cifra_1_chisla + cifra_2_chisla + cifra_3_chisla
+proizvedenie_cifr_chisla = cifra_1_chisla * cifra_2_chisla * cifra_3_chisla
 
-n3 = int(n) - n1*100 - n22*10
-n33 = int (n3)
+print (f'Первая цифра: {cifra_1_chisla}')
+print (f'Вторая цифра: {cifra_2_chisla}')
+print (f'Третья цифра: {cifra_3_chisla}')
+print (f'Сумма цифр числа {chislo} равна {summa_cifr_chisla}.\nПроизведение цифр равно {proizvedenie_cifr_chisla} ')
 
-sum1 = n1 + n22 + n33
-ymn = n1 * n22 * n33
-
-print(f'первая цифра {n1}')
-print(f'вторая цифра {n22}')
-print(f'третья цифра {n33}')
-print(f'сумма цифр числа {n} равна {sum1},произведение цифр равно {ymn} ')
-
-
-# Для выполнения математических операций введите положительное трехзначное число 891
-# первая цифра 8
-# вторая цифра 9
-# третья цифра 1
-# сумма цифр числа 891 равна 18,произведение цифр равно 72
-
+#Для выполнения математических операций введите положительное трехзначное число: 456
+#Первая цифра: 4
+#Вторая цифра: 5
+#Третья цифра: 6
+#Сумма цифр числа 456 равна 15.
+#Произведение цифр равно 120
