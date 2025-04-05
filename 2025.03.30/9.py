@@ -1,3 +1,4 @@
+
 cities = [
     {
         'Барнаул': 2,
@@ -38,3 +39,18 @@ cities = [
         'Ярославль': 5
     }
 ]
+
+obshee_mnogestvo_gorodov = {}
+
+for gorod_slovar in cities:
+    for goroda, info_o_gorode in gorod_slovar.items():
+        if goroda not in obshee_mnogestvo_gorodov:
+            obshee_mnogestvo_gorodov[goroda] = set()  
+        obshee_mnogestvo_gorodov[goroda].add(info_o_gorode)  
+
+
+for goroda, obchia_info_o_gorodah in obshee_mnogestvo_gorodov.items():
+    print(f"'{goroda}': {obchia_info_o_gorodah}")
+
+
+

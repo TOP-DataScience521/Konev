@@ -1,17 +1,22 @@
-n = int(input ('Для идентифицирования года как високосный, введите интерисующий Вас год  '))
+vvod_goda = int(input ('Для идентифицирования года как високосный, введите интерисующий Вас год  '))
 
-x4 = n / 4
-yx4 = int (n / 4)
+if vvod_goda % 4 == 0:
+    god_kratni_4 = 1
+else: 
+    god_kratni_4 = 0
 
-x100 = n / 100
-yx100 = int (n / 100)
+if vvod_goda % 100 == 0:
+    god_kratni_100 = 1
+else: 
+    god_kratni_100 = 0
+    
+if vvod_goda % 400 == 0:
+    god_kratni_400 = 1
+else: 
+    god_kratni_400 = 0
 
-x400 = n / 400
-yx400 = int (n / 400)
-
-if ((x4 == yx4) + (x100 > yx100) == 2) or (x400 == yx400) :
+if ((god_kratni_4 == 1) + (god_kratni_100 = 0) or (god_kratni_400 = 1) :
     print ('Введенный год високосный')
-
 else:
      print ('Введенный год не високосный')
      
