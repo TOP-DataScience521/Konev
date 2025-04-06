@@ -1,5 +1,7 @@
 chislo = input('Для выполнения математических операций введите положительное трехзначное число: ')
 
+# ИСПРАВИТЬ: избыточное количество операций
+# ИСПРАВИТЬ: одинаковые операции в большинстве случаев имеет смысл выполнить заранее
 cifra_1_chisla = int(chislo) // 100
 cifra_2_chisla = int(int(chislo)/10 - cifra_1_chisla*10)
 cifra_3_chisla = int(chislo) - cifra_1_chisla*100 - cifra_2_chisla*10
@@ -7,6 +9,8 @@ cifra_3_chisla = int(chislo) - cifra_1_chisla*100 - cifra_2_chisla*10
 summa_cifr_chisla = cifra_1_chisla + cifra_2_chisla + cifra_3_chisla
 proizvedenie_cifr_chisla = cifra_1_chisla * cifra_2_chisla * cifra_3_chisla
 
+# ИСПРАВИТЬ: вывод не соответствует требуемому формату
+# ИСПРАВИТЬ: избыточное количество операций
 print(f'Первая цифра: {cifra_1_chisla}')
 print(f'Вторая цифра: {cifra_2_chisla}')
 print(f'Третья цифра: {cifra_3_chisla}')
@@ -19,4 +23,7 @@ print(f'Сумма цифр числа {chislo} равна {summa_cifr_chisla}.\
 # Третья цифра: 6
 # Сумма цифр числа 456 равна 15.
 # Произведение цифр равно 120
+
+
+# ИТОГ: 2/4
 
