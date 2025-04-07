@@ -1,28 +1,26 @@
-chislo = input('Для выполнения математических операций введите положительное трехзначное число: ')
+three_digit_number = int(input('Для выполнения математических операций введите положительное трехзначное число: '))
 
-# ИСПРАВИТЬ: избыточное количество операций
+# ИСПРАВИТЬ: избыточное количество операций 
+# Наверно ИСПРАВИЛ
 # ИСПРАВИТЬ: одинаковые операции в большинстве случаев имеет смысл выполнить заранее
-cifra_1_chisla = int(chislo) // 100
-cifra_2_chisla = int(int(chislo)/10 - cifra_1_chisla*10)
-cifra_3_chisla = int(chislo) - cifra_1_chisla*100 - cifra_2_chisla*10
+# Наверно ИСПРАВИЛ
+first_digit = three_digit_number // 100
+second_digit = three_digit_number // 10 % 10
+third_digit = three_digit_number % 10
 
-summa_cifr_chisla = cifra_1_chisla + cifra_2_chisla + cifra_3_chisla
-proizvedenie_cifr_chisla = cifra_1_chisla * cifra_2_chisla * cifra_3_chisla
-
+sum_digits_number = first_digit + second_digit + third_digit
+multiplying_digits_number = first_digit * second_digit * third_digit
 # ИСПРАВИТЬ: вывод не соответствует требуемому формату
+# ИСПРАВИЛ
 # ИСПРАВИТЬ: избыточное количество операций
-print(f'Первая цифра: {cifra_1_chisla}')
-print(f'Вторая цифра: {cifra_2_chisla}')
-print(f'Третья цифра: {cifra_3_chisla}')
-print(f'Сумма цифр числа {chislo} равна {summa_cifr_chisla}.\nПроизведение цифр равно {proizvedenie_cifr_chisla} ')
+# ИСПРАВИЛ
 
+print(f'Сумма цифр = {sum_digits_number}')
+print(f'Произведение цифр = {multiplying_digits_number}')
 
 # Для выполнения математических операций введите положительное трехзначное число: 456
-# Первая цифра: 4
-# Вторая цифра: 5
-# Третья цифра: 6
-# Сумма цифр числа 456 равна 15.
-# Произведение цифр равно 120
+# Сумма цифр = 15
+# Произведение цифр = 120
 
 
 # ИТОГ: 2/4

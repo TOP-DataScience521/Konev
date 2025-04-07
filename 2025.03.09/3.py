@@ -1,17 +1,20 @@
-vremia = input('Введите целое число минут затраченных на изготовление изделия ')
+time_in_minutes = int(input('Введите целое число минут: '))
 
 # ИСПРАВИТЬ: одинаковые операции в большинстве случаев имеет смысл выполнить заранее
-vremia_v_chasah = float(vremia) / 60
-vremia_v_celih_chasah = int(vremia_v_chasah)
-minut = float((vremia_v_chasah) - float(vremia_v_celih_chasah)) * 60
+# Не очень понял замечание, наверно ИСПРАВИЛ
+time_in_hours = int(time_in_minutes) // 60
+remaining_time_in_minutes = (time_in_minutes) - (time_in_hours) * 60
 
 # ИСПРАВИТЬ: вывод не соответствует требуемому формату
-print(f'Деталь изготовлена за {vremia} минут.\nВ отчете будет указано время   {vremia_v_celih_chasah} часа и  {int(minut)} минут')
+# ИСПРАВЛЕНО
+print(f'{time_in_minutes} минут - это {time_in_hours} час {remaining_time_in_minutes} минут ')
 
 
-# Введите целое число минут затраченных на изготовление изделия 156
-# Деталь изготовлена за 156 минут,
-# В отчете будет указано время   2 часа и  36 минут
+# Введите целое число минут: 120
+# 120 минут - это  2 час 0 минут
+
+# Введите целое число минут: 153
+# 153 минут - это  2 час 33 минут
 
 
 # ИТОГ: 1/3
