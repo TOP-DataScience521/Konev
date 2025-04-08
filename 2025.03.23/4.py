@@ -1,30 +1,27 @@
 print('Вам потребуется ввести количество разрядов числа,система определит все простые числа введенной разрядности \nи сообщит Вам их количество.')
-razrad_chisel = int(input('Введите любую разрядность: '))
+number_digits = int(input('Введите любую разрядность: '))
 
-max_chislo_str = str(9) * razrad_chisel
-max_chislo_int = int(max_chislo_str)
+max_number_int = int(str(9) * number_digits)
+min_number_int = int(str(9) * (number_digits - 1))+1
 
-min_chislo_str = str(9) * (razrad_chisel - 1)
-min_chislo_int = int(min_chislo_str) + 1
-
-spisok_vseh_chisel = list(range(min_chislo_int, max_chislo_int, 1))
-kolichestvo_prostih_chisel = 0
+list_all_number = list(range(min_number_int, max_number_int, 1))
+number_prime_numbers = 0
 
 
 
-for chislo_is_spiska in spisok_vseh_chisel:
-    if chislo_is_spiska < 2:
+for number_of_list in list_all_number:
+    if number_of_list < 2:
         continue 
-    priznak_prostogo_chisla = 1
-    koren_chisla_is_spiska =(int(chislo_is_spiska ** (1/2)) +1)
-    for vozmogni_delitel in range(2, koren_chisla_is_spiska, 1):
-        if chislo_is_spiska % vozmogni_delitel == 0:
-            priznak_prostogo_chisla = 0
+    sign_of_prime_number = 1
+    root_number_of_list =(int(number_of_list ** (1/2)) +1)
+    for possible_divisor in range(2, root_number_of_list, 1):
+        if number_of_list % possible_divisor == 0:
+            sign_of_prime_number = 0
             break
-    if priznak_prostogo_chisla > 0:
-        kolichestvo_prostih_chisel = kolichestvo_prostih_chisel + 1
+    if sign_of_prime_number > 0:
+        number_prime_numbers = number_prime_numbers + 1
 
-print(f'Количество всех простых чисел в пределах Вашей разрядности: {kolichestvo_prostih_chisel}')
+print(f'Количество всех простых чисел в пределах Вашей разрядности: {number_prime_numbers}')
 
 
 

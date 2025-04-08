@@ -1,19 +1,27 @@
 print('Вам приветсвует система выявления счастливых билетов.')
 
-nomer_bileta = str(input('Введите шестизначный номер вашего билета: №'))
-cifra_bileta_1 = int(nomer_bileta[0:1])
-cifra_bileta_2 = int(nomer_bileta[1:2])
-cifra_bileta_3 =int(nomer_bileta[2:3])
-cifra_bileta_4 =int(nomer_bileta[3:4])
-cifra_bileta_5 =int(nomer_bileta[4:5])
-cifra_bileta_6 =int(nomer_bileta[5:6])
+ticket_number = str(input('Введите шестизначный номер вашего билета: №'))
+ticket_number_1 = int(ticket_number[0:1])
+ticket_number_2 = int(ticket_number[1:2])
+ticket_number_3 =int(ticket_number[2:3])
+ticket_number_4 =int(ticket_number[3:4])
+ticket_number_5 =int(ticket_number[4:5])
+ticket_number_6 =int(ticket_number[5:6])
 
-cirra_bileta_123 = int(cifra_bileta_1 + cifra_bileta_2 + cifra_bileta_3) 
-cirra_bileta_456 = int(cifra_bileta_4 + cifra_bileta_5 + cifra_bileta_6) 
+ticket_number_123 = int(ticket_number_1 + ticket_number_2 + ticket_number_3) 
+ticket_number_456 = int(ticket_number_4 + ticket_number_5 + ticket_number_6) 
 
-if cirra_bileta_123 == cirra_bileta_456:
-    print (f'Вам повезло, у Вас счастливый билет')
+if ticket_number_123 == ticket_number_456:
+    print (f'ДА')
 else:
-    print (f'Упс, Ваш билет не счастливый')
+    print (f'НЕТ')
     
     
+# Вам приветсвует система выявления счастливых билетов.
+# Введите шестизначный номер вашего билета: №123123
+# ДА
+
+
+# Вам приветсвует система выявления счастливых билетов.
+# Введите шестизначный номер вашего билета: №123111
+# НЕТ
