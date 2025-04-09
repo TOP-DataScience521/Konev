@@ -1,19 +1,19 @@
 print ('Вам необходимо ввести список значений, положительные из них будут сумированны')
 
-kolichestvo_znacheni = int(input('Введите количество значений которые планируете перечислить: '))
+number_of_values = int(input('Введите количество значений которые планируете перечислить: '))
 
-nomer_popitok = 0
-symma_polozitelnih_chesil = 0
+attempt_number = 0
+sum_natural_numbers = 0
 
-while nomer_popitok < kolichestvo_znacheni:
-    ostalos_popitok = int(input (f'введите значение, осталось {kolichestvo_znacheni-nomer_popitok} значений:  '))
-    nomer_popitok = nomer_popitok + 1
-    if ostalos_popitok > 0:
-        symma_polozitelnih_chesil = symma_polozitelnih_chesil + ostalos_popitok
+while attempt_number < number_of_values:
+    attempts_to_enter = int(input (f'введите значение, осталось {number_of_values-attempt_number} значений:  '))
+    attempt_number = attempt_number + 1
+    if attempts_to_enter > 0:
+        sum_natural_numbers = sum_natural_numbers + attempts_to_enter
     else:
-        symma_polozitelnih_chesil = symma_polozitelnih_chesil  
+        sum_natural_numbers = sum_natural_numbers  
         
-print (f'Сумма введенных Вами положительных чисел: {symma_polozitelnih_chesil}')
+print (f'Сумма введенных Вами положительных чисел: {sum_natural_numbers}')
         
         
 #Вам необходимо ввести список значений, положительные из них будут сумированны

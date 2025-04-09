@@ -1,17 +1,14 @@
 print('Система выведет числовой ряд Фибаначчи по Вашему запросу.')
 
-kolichestvo_chisel = int(input('Введите необходимое количество последовательных чисел Фибоначчи: '))
-spisok_fibanachi = [1,1]
+quantity_number = int(input('Введите необходимое количество последовательных чисел Фибоначчи: '))
+fibanachi_list = [1,1]
 
-for chislo in range(2,kolichestvo_chisel,1):
-    chislo_fibonachi = spisok_fibanachi[-1] + spisok_fibanachi[-2]
-    spisok_fibanachi.append(chislo_fibonachi)
+for number in range(2,quantity_number,1):
+    number_fibanachi = fibanachi_list[-1] + fibanachi_list[-2]
+    fibanachi_list.append(number_fibanachi)
+fibanachi_str = ' '.join(map(str, fibanachi_list))
+print(f'{fibanachi_str}')
 
-print(f'{spisok_fibanachi}')
-
-#Система выведет числовой ряд Фибаначчи по Вашему запросу.
-#Введите необходимое количество последовательных чисел Фибоначчи:10
-#[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-#Система выведет числовой ряд Фибаначчи по Вашему запросу.
-#Введите необходимое количество последовательных чисел Фибоначчи:15
-#[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+# Система выведет числовой ряд Фибаначчи по Вашему запросу.
+# Введите необходимое количество последовательных чисел Фибоначчи: 10
+# 1 1 2 3 5 8 13 21 34 55

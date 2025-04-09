@@ -1,19 +1,28 @@
 print('Вам приветсвует телеграфная служба.')
 
-soobchenie = str(input('Введите Ваше сообщение для расчета стоимости отправки: '))
+mail = str(input('Введите Ваше сообщение для расчета стоимости отправки: '))
 
-dlinna_soobchenia = len(soobchenie)
-soobchenie_bez_probelov = soobchenie.replace(" ","")
-dlinna_soobchenia_bez_probel = len(soobchenie_bez_probelov)
+long_mail = len(mail)
+long_mail_not_space = len(mail.replace(" ",""))
 
-obchia_stoimost_otpravki = dlinna_soobchenia_bez_probel * 0.3
+total_cost = str(long_mail_not_space * 0.3)
 
-stoimost_tolko_rubli = int(obchia_stoimost_otpravki)
-stoimost_tolko_kopeiki = int((obchia_stoimost_otpravki - stoimost_tolko_rubli)*100)
-stoimost_tolko_kopeiki = str(stoimost_tolko_kopeiki)[:2]
+cost_in_rubles = total_cost[:total_cost.find('.')]
+cost_in_pennies = total_cost[total_cost.find('.')+1:total_cost.find('.')+4]
 
-print (f'Стоимость отправки Вашего сообщения {stoimost_tolko_rubli} рублей  {stoimost_tolko_kopeiki} копеек.')
+# Докрутил нехватающий ноль для копеек из одного числа
+if len(cost_in_pennies) == 1:
+    cost_in_pennies = cost_in_pennies + '0'
+    
 
-#Вам приветсвует телеграфная служба.
-#Введите Ваше сообщение для расчета стоимости отправки: через несколько дней я приеду
-#Стоимость отправки Вашего сообщения 7 рублей  50 копеек.
+
+print (f'Стоимость отправки Вашего сообщения {cost_in_rubles} рублей  {cost_in_pennies} копеек.')
+
+# Вам приветсвует телеграфная служба.
+# Введите Ваше сообщение для расчета стоимости отправки: грузите апельсины бочках братья карамазовы
+# Стоимость отправки Вашего сообщения 11 рублей  40 копеек.
+
+
+# Вам приветсвует телеграфная служба.
+# Введите Ваше сообщение для расчета стоимости отправки: через несколько дней я приеду
+# Стоимость отправки Вашего сообщения 7 рублей  50 копеек.
