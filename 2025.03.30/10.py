@@ -1,43 +1,43 @@
 
-vvod_filov = input('Введите имена файлов, разделенные ";" и последующим пробелом ').strip()
+file_entry = input('Введите имена файлов, разделенные ";" и последующим пробелом ').strip()
 
-spisok_vvoda_filov = vvod_filov.split('; ')
+file_entry_list = file_entry.split('; ')
 
-slovar_proverka_povtor_filov = {}
+repeat_files_dict = {}
 
-for file in spisok_vvoda_filov:
-    if file in slovar_proverka_povtor_filov:
-        slovar_proverka_povtor_filov[file] += 1
+for file in file_entry_list:
+    if file in repeat_files_dict:
+        repeat_files_dict[file] += 1
     else:
-        slovar_proverka_povtor_filov[file] = 1
+        repeat_files_dict[file] = 1
 
 
-spisok_filov = []
+file_list = []
 
-for file in spisok_vvoda_filov:
-    kolichestvo_failov = slovar_proverka_povtor_filov[file]
+for file in file_entry_list:
+    number_files = repeat_files_dict[file]
     
-    if kolichestvo_failov == 1:
-        spisok_filov.append(file)
+    if number_files == 1:
+        file_list.append(file)
     else:
         # Работаю со строками для новых имен
         if '.' in file:
-            name_fail_bez_formata, format_faila = file.split('.', 1)
+            file_name_without_format, new_name_files = file.split('.', 1)
         else:
-            name_fail_bez_formata, format_faila = file, ''
-        novoe_name_faila = f"{name_fail_bez_formata}_{slovar_proverka_povtor_filov[file]}.{format_faila}" 
-        if format_faila:
-            novoe_name_faila = f"{name_fail_bez_formata}_{slovar_proverka_povtor_filov[file]}.{format_faila}"
+            file_name_without_format, new_name_files = file, ''
+        new_name_file = f"{file_name_without_format}_{repeat_files_dict[file]}.{new_name_files}" 
+        if new_name_files:
+            new_name_file = f"{file_name_without_format}_{repeat_files_dict[file]}.{new_name_files}"
         else:
-            novoe_name_faila = f"{name_fail_bez_formata}_{slovar_proverka_povtor_filov[file]}"
+            new_name_file = f"{file_name_without_format}_{repeat_files_dict[file]}"
             
-        spisok_filov.append(novoe_name_faila)
+        file_list.append(new_name_file)
         # Подбиваю индекс повторов
-        slovar_proverka_povtor_filov[file] = slovar_proverka_povtor_filov[file] -1
+        repeat_files_dict[file] = repeat_files_dict[file] -1
 
-spisok_filov.sort()
+file_list.sort()
 
-for file in spisok_filov:
+for file in file_list:
     print(file)
     
     

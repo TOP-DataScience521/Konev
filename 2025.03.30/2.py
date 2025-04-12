@@ -1,30 +1,30 @@
 print ('Для сосотавления списка покупок для фруктовой корзины, \nВам будет необходимо ввести список покупок.')
 
-pustoi_vvod = 0
-vsefrukt = []
-nomer_frukta = 0
+empty_input = 0
+all_fruits = []
+number_frukt = 0
 # прекращаем запросы после ввода пустой строки
-while pustoi_vvod == 0:
+while empty_input == 0:
     frukt = str(input('Введите фрукт : '))
-    nomer_frukta = nomer_frukta + 1
+    number_frukt = number_frukt + 1
     if frukt == "":
-        pustoi_vvod = 1
+        empty_input = 1
     else:
-        pustoi_vvod = 0
-    vsefrukt.append(frukt) 
+        empty_input = 0
+    all_fruits.append(frukt) 
     
 # ввод "и" перед последним фруктом
-vse_frukt_str = ','.join(vsefrukt)
-index_posledne_zapiatoi = vse_frukt_str.rfind(",")
-vse_frukt_str_mod = vse_frukt_str[:index_posledne_zapiatoi]
-index_predposledne_zapiatoi = vse_frukt_str_mod.rfind(",")
-vse_frukt_str_mod = vse_frukt_str_mod[:index_predposledne_zapiatoi] + ' и ' + vse_frukt_str_mod[index_predposledne_zapiatoi+1:]
+all_fruits_str = ','.join(all_fruits)
+index_last_comma = all_fruits_str.rfind(",")
+all_fruits_str_mod = all_fruits_str[:index_last_comma]
+index_penultimate_comma = all_fruits_str_mod.rfind(",")
+all_fruits_str_mod = all_fruits_str_mod[:index_penultimate_comma] + ' и ' + all_fruits_str_mod[index_penultimate_comma+1:]
 
-if nomer_frukta == 2:
-    odin_frukt = ''.join(vsefrukt)
-    print (f'Итоговый список покупок: {odin_frukt}') 
+if number_frukt == 2:
+    one_fruit = ''.join(all_fruits)
+    print (f'Итоговый список покупок: {one_fruit}') 
 else:
-    print (f'Итоговый список покупок: {vse_frukt_str_mod}') 
+    print (f'Итоговый список покупок: {all_fruits_str_mod}') 
 
 
     

@@ -40,17 +40,17 @@ cities = [
     }
 ]
 
-obshee_mnogestvo_gorodov = {}
+total_set_city = {}
 
-for gorod_slovar in cities:
-    for goroda, info_o_gorode in gorod_slovar.items():
-        if goroda not in obshee_mnogestvo_gorodov:
-            obshee_mnogestvo_gorodov[goroda] = set()  
-        obshee_mnogestvo_gorodov[goroda].add(info_o_gorode)  
+for dictionary_city in cities:
+    for cities, info_city in dictionary_city.items():
+        if cities not in total_set_city:
+            total_set_city[cities] = set()  
+        total_set_city[cities].add(info_city)  
 
 
-for goroda, obchia_info_o_gorodah in obshee_mnogestvo_gorodov.items():
-    print(f"'{goroda}': {obchia_info_o_gorodah}")
+for cities, total_info_cities in total_set_city.items():
+    print(f"'{cities}': {total_info_cities}")
 
 
 

@@ -1,30 +1,30 @@
 print ('Система определить может ли введенная Вами строка являться двоичным значением.')
-kod = input('Введите строку с предполагаемым двоичным значением: ')
+code = input('Введите строку с предполагаемым двоичным значением: ')
 
-kod_index_1 = kod[:1]
-kod_index_2 = kod[:2]
-kod_index_ot_2_do_konca = kod[2:]
+code_index_1 = code[:1]
+code_index_2 = code[:2]
+code_index2_to_last = code[2:]
 
-proverka_index1i2_koda_na_b_ob = 0
-proverka_index_koda_1i2_na_dvoichnost = 0
-proverka_index_koda_ot2do_konec_na_dvoichnost = 0
-proverka_polnogo_koda_na_dvoichnost = 0
+checking_index1i2_code_na_b_ob = 0
+checking_index1i2_code_na_1_0 = 0
+checking_index2_code_1_1 = 0
+checking_full_code_binary = 0
 
-dvoichnie_simvol = {'0','1'}
-kod_index_ot_2_do_konca_set = set(kod_index_ot_2_do_konca)
-kod_index_2_set = set(kod_index_2)
+binary_symbol = {'0','1'}
+code_index2_for_last_set = set(code_index2_to_last)
+code_index_2_set = set(code_index_2)
 
-if (('b' == kod_index_1) + ('0b' == kod_index_2)) > 0:
-    proverka_index1i2_koda_na_b_ob = 1
+if (('b' == code_index_1) + ('0b' == code_index_2)) > 0:
+    checking_index1i2_code_na_b_ob = 1
 else:
-    if 1 == kod_index_2_set.issubset(dvoichnie_simvol):
-        proverka_index_koda_1i2_na_dvoichnost = 1
+    if 1 == code_index_2_set.issubset(binary_symbol):
+        checking_index1i2_code_na_1_0 = 1
 
-if 1 == kod_index_ot_2_do_konca_set.issubset(dvoichnie_simvol):
-    proverka_index_koda_ot2do_konec_na_dvoichnost = 1
+if 1 == code_index2_for_last_set.issubset(binary_symbol):
+    checking_index2_code_1_1 = 1
 
-if ((proverka_index1i2_koda_na_b_ob + proverka_index_koda_1i2_na_dvoichnost) + proverka_index_koda_ot2do_konec_na_dvoichnost) > 1:
-    proverka_polnogo_koda_na_dvoichnost = 1
+if ((checking_index1i2_code_na_b_ob + checking_index1i2_code_na_1_0) + checking_index2_code_1_1) > 1:
+    checking_full_code_binary = 1
     print (f'Введенная Вами строка ЯВЛЯЕТСЯ двоичным значением')  
 else:
     print (f'Введенная Вами строка НЕ ЯВЛЯЕТСЯ двоичным значением')    
