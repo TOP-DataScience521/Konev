@@ -8,7 +8,7 @@ long_mail_not_space = len(mail.replace(" ",""))
 total_cost = str(long_mail_not_space * 0.3)
 
 cost_in_rubles = total_cost[:total_cost.find('.')]
-cost_in_pennies = total_cost[total_cost.find('.')+1:total_cost.find('.')+4]
+cost_in_pennies = total_cost[total_cost.find('.')+1:total_cost.find('.')+3]
 
 # Докрутил нехватающий ноль для копеек из одного числа
 if len(cost_in_pennies) == 1:
