@@ -13,7 +13,7 @@ check = 0
 # решил сделать отдельную функцию для работы со словарем
 def character_symbol(symbol: str)-> str:
 
-"""
+    """
     Преобразует символы в строке в их числовые эквиваленты согласно словарю dict_32.
     Если символ не найден в словаре, оставляет его без изменений.
 
@@ -22,7 +22,7 @@ def character_symbol(symbol: str)-> str:
 
     returns:
         str: Строка с замененными символами на их числовые представления
-"""
+    """
 
     new_symbol = ''
     for sign in symbol:    
@@ -37,7 +37,7 @@ def character_symbol(symbol: str)-> str:
 # Основная функция, в которую подаю "значение, то в каком счислении оно находится и то, в какое надо преобразовать"
 def int_base(value: str, from_counting: int, in_counting: int):
 
- """
+    """
     Конвертирует число из одной системы счисления в другую (до 32-ричной).
 
     параметры:
@@ -49,7 +49,7 @@ def int_base(value: str, from_counting: int, in_counting: int):
         str | None: Преобразованное число в целевой системе счисления или None, если:
                    - исходная система < 11, но число содержит буквы
                    - некорректные параметры
- """
+    """
 
 
 
@@ -87,3 +87,14 @@ def from_10_number(decimal_value: int, size: int):
         x_numerical_value.append(dict_32[remains])  
         decimal_value //= size     
     return ''.join(reversed(x_numerical_value))
+    
+    
+    
+    
+# >>> int_base('ff00', 16, 2)
+# '1111111100000000'
+# >>> int_base('1101010', 2, 30)
+# '3G'
+# >>> int_base('1010', 2, 30)
+# 'A'
+# >>>
