@@ -152,12 +152,12 @@ def analyze_correlations():
             cancer_years_used.append(year)
          
         print (f'Вариационные ряды (горизонтально) \n')         
-        print(f"Годы затрат на науку: {science_years_used}")
-        print(f"Сумма затрат: {science_series}")
-        print(f"Годы ранней диагностики: {cancer_years_used}")
-        print(f"Процент выявления заболеваний: {cancer_series} \n")
-        print(f"Величина сдвига значений показателей по временной шкале (в годах) {shift_in_years} \n ")
-        print(f"Коэффициент корреляции: {corr:.4f}")
+        print(f'Годы затрат на науку: {science_years_used}')
+        print(f'Сумма затрат: {science_series}')
+        print(f'Годы ранней диагностики: {cancer_years_used}')
+        print(f'Процент выявления заболеваний: {cancer_series} \n')
+        print(f'Величина сдвига значений показателей по временной шкале (в годах) {shift_in_years} \n ')
+        print(f'Коэффициент корреляции: {corr:.4f}')
         print("\n" + "-"*40)
 
 if __name__ == '__main__':

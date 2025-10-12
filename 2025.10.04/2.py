@@ -58,7 +58,7 @@ def analyze_data_periods(oil_data, diesel_data):
     common_start = max(oil_months[0], diesel_months[0])
     common_end = min(oil_months[-1], diesel_months[-1])
     
-    #print(f"gересекающийся период с {common_start} по {common_end}")
+    #print(f'gересекающийся период с {common_start} по {common_end})
     
     
     # буду возвращать кортежи с началом и концом пересекающимся периодом
@@ -164,8 +164,8 @@ def analyze_temporal_correlations():
                 year, month = date
                 diesel_str += f"({year}-{month:02d}: {price:5.2f}) "
             print(diesel_str)
-            print(f"сдвиг {shift_months:3d} месяцев") 
-            print(f"коэффициент корреляции равен {correlation:.4f}")
+            print(f'сдвиг {shift_months:3d} месяцев') 
+            print(f'коэффициент корреляции равен {correlation:.4f}')
 
 # тут я кое что не продумал, поэтому придется городить огород из похожих функций
 # эта функция будет для вывода в более менее нужном мне фолрмате
@@ -260,7 +260,7 @@ def main():
     
     
    
-    #print(f"\n регрессия для сдвига {best_shift} месяцев")
+    #print(f'\n регрессия для сдвига {best_shift} месяцев')
  
     # вызовим функция для сопостовления рядов со сдвигами
     oil_aligned, diesel_aligned = create_aligned_series_monthly(oil_data, diesel_data, best_shift)
@@ -271,7 +271,7 @@ def main():
       
         
     print("\n уравнения функции прямой теоретической линии регрессии с подставленными значениями коэффициентов")
-    print(f"y = {a:.4f} + {b:.4f} · x")
+    print(f'y = {a:.4f} + {b:.4f} · x')
         
         
         # вызываю функцию для построения графика
