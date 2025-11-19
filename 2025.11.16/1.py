@@ -79,7 +79,7 @@ def my_recreational_movie_search_system():
             # тут вообще с 50-го раза сработало, очень странно работает
             # получается метод берет все перед концом строки, и если там пусто 
             # то выводит сообщение об ошибке            
-            output_text.insert(my_interface.END, "Ошибка: Введите название фильма для поиска")
+            output_text.insert(my_interface.END, "ошибка: названия не введено")
             return
         
         # ищем фильм в базе данных,  нашел коечто для регистронезависимости case=False
@@ -127,7 +127,7 @@ def my_recreational_movie_search_system():
         result = model.kneighbors(vector_search)
         
         # вытягиваю название фильмов title и год выпуска
-        result_text = f"Похожие фильмы на: '{movie_info['title']}' ({movie_info['year']})\n"
+        result_text = f"похожие фильмы на: '{movie_info['title']}' ({movie_info['year']})\n"
         # 
         result_text += "=" * 50 + "\n\n"
         
@@ -138,7 +138,7 @@ def my_recreational_movie_search_system():
         #  из результата 0 беру расстояние, из результата 1 беру индексы фильмов
         #  хочу использовать отдельно дистанцию для коекакой наглядности
             distance = result[0][0][i]  
-            idx = result[1][0][i]       
+            idx = result[1][0][i]       p
          
         # поиск фильмов, получаю фильмы из датафрейма по индексу         
             similar_movie = movies_ref_filt.iloc[idx]
@@ -150,7 +150,7 @@ def my_recreational_movie_search_system():
         # вот зачем я вытащил из результата дистанцию, хочу паралельно видеть степень похожести
         # как я понял чем меньше угол между векторами тем больше их похожесть
         # интерпритрую эту схожесть в проценты
-            result_text += f"   Схожесть: {100*(1 - distance):.1f}%\n\n"
+            result_text += f"   похожесть: {100*(1 - distance):.1f}%\n\n"
         
         # вывожу результат в мнострокое поле
         output_text.delete(1.0, my_interface.END)
