@@ -75,14 +75,14 @@ window.title("арима")
 window.geometry("400x300")
 
 # поле для ввода p
-label1 = my_interface.Label(window, text="Введите p:")
+label1 = my_interface.Label(window, text="введите p:")
 label1.pack(pady=5)
 text_vvod1 = my_interface.Entry(window, width=20)
 text_vvod1.pack(pady=5)
 text_vvod1.insert(0, "1")  
 
 # поле для ввода q
-label2 = my_interface.Label(window, text="Введите q:")
+label2 = my_interface.Label(window, text="введите q:")
 label2.pack(pady=5)
 text_vvod2 = my_interface.Entry(window, width=20)
 text_vvod2.pack(pady=5)
@@ -91,7 +91,7 @@ text_vvod2.insert(0, "1")
 # кнопка
 button = my_interface.Button(
     window,
-    text="Запустить модель",
+    text="запуск модели",
     command=pysk,
     bg="lightblue"
 )
